@@ -1,0 +1,45 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1708380725
+icon.svg::CompressedTexture2D::2455082875730507069::1708380609::1708380614::1::::<><>::
+::res://Assets/::1708380787
+::res://Assets/Character/::1708380826
+_Attack2.png::CompressedTexture2D::199876016728711036::1708380826::1708380826::1::::<><>::
+_Attack2NoMovement.png::CompressedTexture2D::5973082890695478809::1708380826::1708380826::1::::<><>::
+_Attack.png::CompressedTexture2D::6826014359694370036::1708380826::1708380826::1::::<><>::
+_AttackCombo2hit.png::CompressedTexture2D::7374984658767863815::1708380826::1708380826::1::::<><>::
+_AttackComboNoMovement.png::CompressedTexture2D::4231603344445727062::1708380826::1708380826::1::::<><>::
+_AttackNoMovement.png::CompressedTexture2D::9000259160631432853::1708380826::1708380826::1::::<><>::
+_Crouch.png::CompressedTexture2D::428010674018520151::1708380826::1708380826::1::::<><>::
+_CrouchAttack.png::CompressedTexture2D::1369234884511396393::1708380826::1708380826::1::::<><>::
+_CrouchFull.png::CompressedTexture2D::7374164634703079849::1708380826::1708380826::1::::<><>::
+_CrouchTransition.png::CompressedTexture2D::470570664734073956::1708380826::1708380826::1::::<><>::
+_CrouchWalk.png::CompressedTexture2D::2805935089540809295::1708380826::1708380826::1::::<><>::
+_Dash.png::CompressedTexture2D::7732225261614446185::1708380826::1708380826::1::::<><>::
+_Death.png::CompressedTexture2D::1017055393506460898::1708380826::1708380826::1::::<><>::
+_DeathNoMovement.png::CompressedTexture2D::6562039054989338892::1708380826::1708380826::1::::<><>::
+_Fall.png::CompressedTexture2D::3697417201566201949::1708380826::1708380826::1::::<><>::
+_Hit.png::CompressedTexture2D::6553312340409308248::1708380826::1708380826::1::::<><>::
+_Idle.png::CompressedTexture2D::2820152975436865290::1708380826::1708380826::1::::<><>::
+_Jump.png::CompressedTexture2D::83482845539089513::1708380826::1708380826::1::::<><>::
+_JumpFallInbetween.png::CompressedTexture2D::6400128585801780423::1708380826::1708380826::1::::<><>::
+_Roll.png::CompressedTexture2D::3653430420403711836::1708380826::1708380826::1::::<><>::
+_Run.png::CompressedTexture2D::6975236389384598427::1708380826::1708380826::1::::<><>::
+_Slide.png::CompressedTexture2D::125536529278670315::1708380826::1708380826::1::::<><>::
+_SlideFull.png::CompressedTexture2D::599207843516934784::1708380826::1708380826::1::::<><>::
+_SlideTransitionEnd.png::CompressedTexture2D::2305675271557590287::1708380826::1708380826::1::::<><>::
+_SlideTransitionStart.png::CompressedTexture2D::3213326938308940982::1708380826::1708380826::1::::<><>::
+_TurnAround.png::CompressedTexture2D::2789550101075207703::1708380826::1708380826::1::::<><>::
+_WallClimb.png::CompressedTexture2D::5755230945254041952::1708380826::1708380826::1::::<><>::
+_WallClimbNoMovement.png::CompressedTexture2D::2655808838823709791::1708380826::1708380826::1::::<><>::
+_WallHang.png::CompressedTexture2D::6292372066059789799::1708380826::1708380826::1::::<><>::
+_WallSlide.png::CompressedTexture2D::1296954109687791986::1708380826::1708380826::1::::<><>::
+::res://Assets/Level Layouts/::1708380725
+::res://Assets/Level Layouts/Background/::1708380725
+BGBack.png::CompressedTexture2D::6336562484625412194::1708380721::1708380725::1::::<><>::
+BGFront.png::CompressedTexture2D::3276500855666659711::1708380721::1708380725::1::::<><>::
+CloudsBack.png::CompressedTexture2D::7253952747432619811::1708380721::1708380725::1::::<><>::
+CloudsFront.png::CompressedTexture2D::232627402081879296::1708380721::1708380725::1::::<><>::
+::res://Assets/Level Layouts/Foreground/::1708380725
+Tileset.png::CompressedTexture2D::347190948819348134::1708380721::1708380725::1::::<><>::
+TilesExamples.png::CompressedTexture2D::5744131186641414466::1708380721::1708380725::1::::<><>::
+Trees.png::CompressedTexture2D::3044046815716355088::1708380721::1708380725::1::::<><>::
