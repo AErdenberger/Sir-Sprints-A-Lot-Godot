@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="SirSprintsALot"
+run/main_scene="res://Scenes/Level_1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"

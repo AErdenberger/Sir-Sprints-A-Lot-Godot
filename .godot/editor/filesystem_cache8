@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708380725
+::res://::1708382113
 icon.svg::CompressedTexture2D::2455082875730507069::1708380609::1708380614::1::::<><>::
 ::res://Assets/::1708380787
-::res://Assets/Character/::1708380826
+::res://Assets/Character/::1708383298
 _Attack2.png::CompressedTexture2D::199876016728711036::1708380826::1708380826::1::::<><>::
 _Attack2NoMovement.png::CompressedTexture2D::5973082890695478809::1708380826::1708380826::1::::<><>::
 _Attack.png::CompressedTexture2D::6826014359694370036::1708380826::1708380826::1::::<><>::
@@ -43,3 +43,5 @@ CloudsFront.png::CompressedTexture2D::232627402081879296::1708380721::1708380725
 Tileset.png::CompressedTexture2D::347190948819348134::1708380721::1708380725::1::::<><>::
 TilesExamples.png::CompressedTexture2D::5744131186641414466::1708380721::1708380725::1::::<><>::
 Trees.png::CompressedTexture2D::3044046815716355088::1708380721::1708380725::1::::<><>::
+::res://Scenes/::1708381057
+::res://Scripts/::1708381051
