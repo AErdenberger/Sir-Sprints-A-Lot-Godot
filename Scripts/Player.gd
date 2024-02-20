@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -200.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var health = 4
 
 
 func _physics_process(delta):
@@ -34,8 +35,15 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	if health < 1:
+		handle_death()
+	
 	if global_position.y > 500:
 		game_over()
 	
 func game_over():
 	get_tree().reload_current_scene()
+	
+func handle_death():
+	_animated_sprite.play("Death")
+	game_over()
