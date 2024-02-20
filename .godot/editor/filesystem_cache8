@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708382113
+::res://::1708388999
 icon.svg::CompressedTexture2D::2455082875730507069::1708380609::1708380614::1::::<><>::
+::res://Animations/::1708383865
 ::res://Assets/::1708380787
 ::res://Assets/Character/::1708383298
 _Attack2.png::CompressedTexture2D::199876016728711036::1708380826::1708380826::1::::<><>::
@@ -43,5 +44,7 @@ CloudsFront.png::CompressedTexture2D::232627402081879296::1708380721::1708380725
 Tileset.png::CompressedTexture2D::347190948819348134::1708380721::1708380725::1::::<><>::
 TilesExamples.png::CompressedTexture2D::5744131186641414466::1708380721::1708380725::1::::<><>::
 Trees.png::CompressedTexture2D::3044046815716355088::1708380721::1708380725::1::::<><>::
-::res://Scenes/::1708381057
-::res://Scripts/::1708381051
+::res://Scenes/::1708387879
+Level_1.tscn::PackedScene::2077468257857753234::1708387879::0::1::::<><>::uid://dbl4soqgr0wfj::::res://Assets/Level Layouts/Background/CloudsBack.png<>uid://dkxlsi3hic3q::::res://Assets/Level Layouts/Background/CloudsFront.png<>uid://cwjqi1vy6o4gc::::res://Assets/Level Layouts/Background/BGBack.png<>uid://bmxfqw5j5qjvr::::res://Assets/Level Layouts/Background/BGFront.png<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>res://Scripts/Player.gd<>uid://bsxb6k2k70eaf::::res://Assets/Character/_Fall.png<>uid://bggdriv3mpo71::::res://Assets/Character/_Idle.png<>uid://bgo7krmynxc8::::res://Assets/Character/_Jump.png<>uid://c6m4ehvchgufb::::res://Assets/Character/_Run.png
+::res://Scripts/::1708386954
+Player.gd::GDScript::-1::1708386954::0::1::::<>CharacterBody2D<>::
