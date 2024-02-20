@@ -480,6 +480,7 @@ layer_3/name = "Decoration"
 layer_3/tile_data = PackedInt32Array(196593, 393216, 3, 196594, 458752, 3, 196595, 524288, 3, 196596, 589824, 3, 131116, 393216, 3, 131117, 458752, 3, 131118, 524288, 3, 131119, 589824, 3, 65528, 327680, 5, 65529, 393216, 5, 65530, 458752, 5, -262141, 327680, 5, -262140, 393216, 5, -262139, 458752, 5)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-464, 123)
 script = ExtResource("6_dvwyc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
