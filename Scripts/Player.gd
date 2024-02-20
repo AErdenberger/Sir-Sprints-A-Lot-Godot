@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -200.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var health = 4
+var facing_right = true
 
 
 func _physics_process(delta):
@@ -14,6 +15,7 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		_animated_sprite.play("Fall")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
@@ -22,15 +24,18 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("Left", "Right")
-	if direction:
-		_animated_sprite.play("Run")
+	var direction = Input.get_action_strength("Right") - Input.get_action_strength("Left")
+	if direction != 0:
 		velocity.x = direction * SPEED
+		if (direction > 0 and not facing_right) or (direction < 0 and facing_right):
+			_animated_sprite.flip_h = facing_right
+			facing_right = !facing_right
+			_animated_sprite.play("Run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		_animated_sprite.stop()
 	
-	if not direction and is_on_floor():
+	if direction == 0 and is_on_floor():
 		_animated_sprite.play("Idle")
 
 	move_and_slide()
