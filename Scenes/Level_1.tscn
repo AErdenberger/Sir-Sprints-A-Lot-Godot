@@ -490,6 +490,7 @@ animation = &"Jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-3, 10)
+scale = Vector2(1, 0.84)
 shape = SubResource("CapsuleShape2D_uls3h")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]

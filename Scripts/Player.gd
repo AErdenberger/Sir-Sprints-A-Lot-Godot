@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var _animated_sprite = $AnimatedSprite2D
+@onready var _collisionshape = $CollisionShape2D
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
@@ -8,6 +9,7 @@ const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var health = 4
 var facing_right = true
+var is_crouching = false
 
 
 func _physics_process(delta):
@@ -31,6 +33,14 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		_animated_sprite.stop()
+		
+	if Input.get_action_strength("Crouch"):
+		handle_crouch()
+	if Input.is_action_just_released("Crouch"):
+		is_crouching = false
+		_collisionshape.scale.y *= 2
+		_animated_sprite.stop()
+		
 	
 	if velocity == Vector2.ZERO and is_on_floor():
 		_animated_sprite.play("Idle")
@@ -56,3 +66,9 @@ func game_over():
 func handle_death():
 	_animated_sprite.play("Death")
 	game_over()
+	
+func handle_crouch():
+	_collisionshape.scale.y /= 2
+	if not is_crouching:
+		is_crouching = true
+	_animated_sprite.play("Crouch")
