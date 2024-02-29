@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bj4mxspr6i4h8"]
+
+[ext_resource type="Texture2D" uid="uid://dbl4soqgr0wfj" path="res://Assets/Level Layouts/Background/CloudsBack.png" id="1_h23i5"]
+[ext_resource type="Texture2D" uid="uid://dkxlsi3hic3q" path="res://Assets/Level Layouts/Background/CloudsFront.png" id="2_grbh3"]
+[ext_resource type="Texture2D" uid="uid://cwjqi1vy6o4gc" path="res://Assets/Level Layouts/Background/BGBack.png" id="3_grhei"]
+[ext_resource type="Texture2D" uid="uid://bmxfqw5j5qjvr" path="res://Assets/Level Layouts/Background/BGFront.png" id="4_6xh80"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -550.0
+offset_top = -262.0
+offset_right = 602.0
+offset_bottom = 386.0
+color = Color(0, 0, 0, 1)
+
+[node name="CloudsBack" type="Sprite2D" parent="ColorRect"]
+position = Vector2(564, 301)
+scale = Vector2(2, 1)
+texture = ExtResource("1_h23i5")
+
+[node name="CloudsFront" type="Sprite2D" parent="ColorRect"]
+position = Vector2(564, 302)
+scale = Vector2(2, 1)
+texture = ExtResource("2_grbh3")
+
+[node name="BgBack" type="Sprite2D" parent="ColorRect"]
+position = Vector2(564, 301)
+scale = Vector2(2, 1)
+texture = ExtResource("3_grhei")
+
+[node name="BgFront" type="Sprite2D" parent="ColorRect"]
+position = Vector2(564, 301)
+scale = Vector2(2, 1)
+texture = ExtResource("4_6xh80")
