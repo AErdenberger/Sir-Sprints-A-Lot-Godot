@@ -1,9 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://4ulumcyldjxy"]
+[gd_scene load_steps=6 format=3 uid="uid://4ulumcyldjxy"]
 
-[ext_resource type="Texture2D" uid="uid://dbl4soqgr0wfj" path="res://Assets/Level Layouts/Background/CloudsBack.png" id="1_jne6i"]
-[ext_resource type="Texture2D" uid="uid://dkxlsi3hic3q" path="res://Assets/Level Layouts/Background/CloudsFront.png" id="2_bn2kl"]
-[ext_resource type="Texture2D" uid="uid://cwjqi1vy6o4gc" path="res://Assets/Level Layouts/Background/BGBack.png" id="3_w0ylx"]
-[ext_resource type="Texture2D" uid="uid://bmxfqw5j5qjvr" path="res://Assets/Level Layouts/Background/BGFront.png" id="4_j12gq"]
+[ext_resource type="PackedScene" uid="uid://bj4mxspr6i4h8" path="res://Scenes/background.tscn" id="1_e46x1"]
 [ext_resource type="Texture2D" uid="uid://e7ggi64r5nl3" path="res://Assets/Level Layouts/Foreground/Tileset.png" id="5_urb57"]
 [ext_resource type="PackedScene" uid="uid://cge7s4cddg137" path="res://Scenes/Player.tscn" id="6_718xb"]
 
@@ -189,34 +186,7 @@ sources/0 = SubResource("TileSetAtlasSource_eoav2")
 
 [node name="Main" type="Node2D"]
 
-[node name="Node2D" type="Node2D" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="Node2D"]
-offset_left = -550.0
-offset_top = -262.0
-offset_right = 602.0
-offset_bottom = 386.0
-color = Color(0, 0, 0, 1)
-
-[node name="CloudsBack" type="Sprite2D" parent="Node2D/ColorRect"]
-position = Vector2(564, 301)
-scale = Vector2(2, 1)
-texture = ExtResource("1_jne6i")
-
-[node name="CloudsFront" type="Sprite2D" parent="Node2D/ColorRect"]
-position = Vector2(564, 302)
-scale = Vector2(2, 1)
-texture = ExtResource("2_bn2kl")
-
-[node name="BgBack" type="Sprite2D" parent="Node2D/ColorRect"]
-position = Vector2(564, 301)
-scale = Vector2(2, 1)
-texture = ExtResource("3_w0ylx")
-
-[node name="BgFront" type="Sprite2D" parent="Node2D/ColorRect"]
-position = Vector2(564, 301)
-scale = Vector2(2, 1)
-texture = ExtResource("4_j12gq")
+[node name="Node2D" parent="." instance=ExtResource("1_e46x1")]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-258, 104)
