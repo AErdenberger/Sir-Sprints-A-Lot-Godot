@@ -11,6 +11,13 @@ var health = 4
 var facing_right = true
 var is_crouching = false
 
+var original_collision_height = 0
+var original_collision_pos = Vector2.ZERO
+
+
+func _ready():
+	original_collision_height = _collisionshape.shape.size.y * 2
+	original_collision_pos = _collisionshape.global_position
 
 func _physics_process(delta):
 	
@@ -38,7 +45,8 @@ func _physics_process(delta):
 		handle_crouch()
 	if Input.is_action_just_released("Crouch"):
 		is_crouching = false
-		_collisionshape.scale.y *= 2
+		_collisionshape.size.y = original_collision_height / 2
+		_collisionshape.global_position = original_collision_pos
 		_animated_sprite.stop()
 		
 	
@@ -68,7 +76,8 @@ func handle_death():
 	game_over()
 	
 func handle_crouch():
-	_collisionshape.scale.y /= 2
 	if not is_crouching:
 		is_crouching = true
+		_collisionshape.shape.size.y /= 2
+		original_collision_pos = _collisionshape.global_position
 	_animated_sprite.play("Crouch")

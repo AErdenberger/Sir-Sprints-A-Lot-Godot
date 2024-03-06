@@ -1,2 +1,4 @@
-res://Scenes/Level_2.tscn
 res://Scenes/Level_1.tscn
+res://Scripts/Player.gd
+res://Scenes/Level_2.tscn
+res://Scenes/Player.tscn
