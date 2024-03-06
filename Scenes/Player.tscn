@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bgo7krmynxc8" path="res://Assets/Character/_Jump.png" id="4_wife2"]
 [ext_resource type="Texture2D" uid="uid://cxgjghik6mhp4" path="res://Assets/Character/_JumpFallInbetween.png" id="5_ckth4"]
 [ext_resource type="Texture2D" uid="uid://c6m4ehvchgufb" path="res://Assets/Character/_Run.png" id="6_vr65f"]
-[ext_resource type="Shape2D" uid="uid://3btfkqhvj40b" path="res://Resources/crouching_cshape.tres" id="9_no3nd"]
+[ext_resource type="Shape2D" uid="uid://dkkplkoqy6oal" path="res://Resources/standing_shape.tres" id="9_occpd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2fyij"]
 atlas = ExtResource("2_doymh")
@@ -330,12 +330,12 @@ script = ExtResource("1_cailv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_be2xe")
-animation = &"Crouch"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.39294, 13)
+position = Vector2(-2, 10)
 scale = Vector2(1.69648, 0.90155)
-shape = ExtResource("9_no3nd")
+shape = ExtResource("9_occpd")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)

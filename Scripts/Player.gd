@@ -84,3 +84,5 @@ func handle_standing():
 		return
 	is_crouching = false
 	_collisionshape.shape = standing_cshape
+	_collisionshape.position.x = -2
+	_collisionshape.position.y = 10
