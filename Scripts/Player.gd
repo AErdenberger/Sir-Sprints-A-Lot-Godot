@@ -11,13 +11,8 @@ var health = 4
 var facing_right = true
 var is_crouching = false
 
-var original_collision_height = 0
-var original_collision_pos = Vector2.ZERO
-
-
-func _ready():
-	original_collision_height = _collisionshape.shape.size.y * 2
-	original_collision_pos = _collisionshape.global_position
+var standing_cshape = preload("res://Resources/standing_shape.tres")
+var crouching_cshape = preload("res://Resources/crouching_cshape.tres")
 
 func _physics_process(delta):
 	
@@ -50,10 +45,7 @@ func _physics_process(delta):
 	if Input.get_action_strength("Crouch"):
 		handle_crouch()
 	if Input.is_action_just_released("Crouch"):
-		is_crouching = false
-		_collisionshape.shape.size.y = original_collision_height / 2
-		_collisionshape.global_position = original_collision_pos
-		_animated_sprite.stop()
+		handle_standing()
 		
 	
 	if velocity == Vector2.ZERO and is_on_floor():
@@ -82,8 +74,13 @@ func handle_death():
 	game_over()
 	
 func handle_crouch():
+	if is_crouching:
+		return
+	is_crouching = true
+	_collisionshape.shape = crouching_cshape
+
+func handle_standing():
 	if not is_crouching:
-		is_crouching = true
-		_collisionshape.shape.size.y /= 2
-		original_collision_pos = _collisionshape.global_position
-	_animated_sprite.play("Crouch")
+		return
+	is_crouching = false
+	_collisionshape.shape = standing_cshape
