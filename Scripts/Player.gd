@@ -34,9 +34,15 @@ func _physics_process(delta):
 		if (direction > 0 and not facing_right) or (direction < 0 and facing_right):
 			_animated_sprite.flip_h = facing_right
 			facing_right = !facing_right
-			_animated_sprite.play("Run")
+			if is_crouching:
+				_animated_sprite.play("CrouchWalk")
+			else:
+				_animated_sprite.play("Run")
 		else:
-			_animated_sprite.play("Run")
+			if is_crouching:
+				_animated_sprite.play("CrouchWalk")
+			else:
+				_animated_sprite.play("Run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		_animated_sprite.stop()
