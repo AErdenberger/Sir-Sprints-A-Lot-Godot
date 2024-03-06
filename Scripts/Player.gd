@@ -45,7 +45,7 @@ func _physics_process(delta):
 		handle_crouch()
 	if Input.is_action_just_released("Crouch"):
 		is_crouching = false
-		_collisionshape.size.y = original_collision_height / 2
+		_collisionshape.shape.size.y = original_collision_height / 2
 		_collisionshape.global_position = original_collision_pos
 		_animated_sprite.stop()
 		
