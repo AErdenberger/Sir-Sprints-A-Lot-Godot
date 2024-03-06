@@ -78,6 +78,8 @@ func handle_crouch():
 		return
 	is_crouching = true
 	_collisionshape.shape = crouching_cshape
+	_collisionshape.position.x = -2
+	_collisionshape.position.y = 13
 
 func handle_standing():
 	if not is_crouching:
