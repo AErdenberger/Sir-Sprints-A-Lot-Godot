@@ -22,7 +22,10 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("Left", "Right")
-	velocity.x = direction * SPEED
+	if is_crouching:
+		velocity.x = (direction * SPEED) /2
+	else:
+		velocity.x = direction * SPEED
 	
 	if direction != 0:
 		switch_direction(direction)
@@ -72,9 +75,15 @@ func handle_standing():
 func update_animations(player_direction):
 	if is_on_floor():
 		if player_direction == 0:
-			_animated_sprite.play("Idle")
+			if is_crouching:
+				_animated_sprite.play("Crouch")
+			else:
+				_animated_sprite.play("Idle")
 		else:
-			_animated_sprite.play("Run")
+			if is_crouching:
+				_animated_sprite.play("CrouchWalk")
+			else:
+				_animated_sprite.play("Run")
 	else:
 		if velocity.y < 0:
 			_animated_sprite.play("Jump")
@@ -83,4 +92,5 @@ func update_animations(player_direction):
 
 func switch_direction(player_direction):
 	_animated_sprite.flip_h = (player_direction == -1)
-	_animated_sprite.position.x = player_direction * 4
+	if _animated_sprite.flip_h:
+		_animated_sprite.position.x = player_direction * 4
