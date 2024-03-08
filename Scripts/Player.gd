@@ -8,7 +8,6 @@ const JUMP_VELOCITY = -300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var health = 4
-var facing_right = true
 var is_crouching = false
 
 var standing_cshape = preload("res://Resources/standing_shape.tres")
@@ -24,23 +23,10 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_action_strength("Right") - Input.get_action_strength("Left")
+	velocity.x = direction * SPEED
+	
 	if direction != 0:
-		velocity.x = direction * SPEED
-		if (direction > 0 and not facing_right) or (direction < 0 and facing_right):
-			_animated_sprite.flip_h = facing_right
-			facing_right = !facing_right
-			if is_crouching:
-				_animated_sprite.play("CrouchWalk")
-			else:
-				_animated_sprite.play("Run")
-		else:
-			if is_crouching:
-				_animated_sprite.play("CrouchWalk")
-			else:
-				_animated_sprite.play("Run")
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		_animated_sprite.stop()
+		switch_direction(direction)
 		
 	if Input.get_action_strength("Crouch"):
 		handle_crouch()
@@ -95,3 +81,6 @@ func update_animations(player_direction):
 			_animated_sprite.play("Jump")
 		elif velocity.y > 0:
 			_animated_sprite.play("Fall")
+
+func switch_direction(player_direction):
+	_animated_sprite.flip_h = (player_direction == -1)
