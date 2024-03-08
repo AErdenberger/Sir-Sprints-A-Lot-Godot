@@ -18,17 +18,16 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-		_animated_sprite.play("Fall")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_action_strength("Right") - Input.get_action_strength("Left")
+	var direction = Input.get_axis("Left", "Right")
 	velocity.x = direction * SPEED
 	
 	if direction != 0:
 		switch_direction(direction)
 		
-	if Input.get_action_strength("Crouch"):
+	if Input.is_action_just_pressed("Crouch"):
 		handle_crouch()
 	if Input.is_action_just_released("Crouch"):
 		handle_standing()
@@ -68,7 +67,7 @@ func handle_standing():
 	is_crouching = false
 	_collisionshape.shape = standing_cshape
 	_collisionshape.position.x = -2
-	_collisionshape.position.y = 10
+	_collisionshape.position.y = 11.25
 	
 func update_animations(player_direction):
 	if is_on_floor():
@@ -84,3 +83,4 @@ func update_animations(player_direction):
 
 func switch_direction(player_direction):
 	_animated_sprite.flip_h = (player_direction == -1)
+	_animated_sprite.position.x = player_direction * 4

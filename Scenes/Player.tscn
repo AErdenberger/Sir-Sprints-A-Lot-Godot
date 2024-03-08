@@ -330,10 +330,10 @@ script = ExtResource("1_cailv")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_be2xe")
-animation = &"Jump"
+animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 10)
+position = Vector2(-2, 11.25)
 scale = Vector2(1.69648, 0.90155)
 shape = ExtResource("9_7xk45")
 debug_color = Color(0, 0.6, 0.701961, 0.419608)
