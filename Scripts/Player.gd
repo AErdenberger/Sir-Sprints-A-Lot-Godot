@@ -46,16 +46,9 @@ func _physics_process(delta):
 		handle_crouch()
 	if Input.is_action_just_released("Crouch"):
 		handle_standing()
-		
-	
-	if velocity == Vector2.ZERO and is_on_floor():
-		_animated_sprite.play("Idle")
 
 	# Handle jump.
 	if Input.is_action_just_pressed("Jump") and is_on_floor():
-		if(_animated_sprite.is_playing()):
-			_animated_sprite.stop()
-		_animated_sprite.play("Jump")
 		velocity.y = JUMP_VELOCITY
 	
 	move_and_slide()
@@ -65,6 +58,8 @@ func _physics_process(delta):
 	
 	if global_position.y > 500:
 		game_over()
+	
+	update_animations(direction)
 	
 func game_over():
 	get_tree().reload_current_scene()
@@ -88,3 +83,15 @@ func handle_standing():
 	_collisionshape.shape = standing_cshape
 	_collisionshape.position.x = -2
 	_collisionshape.position.y = 10
+	
+func update_animations(player_direction):
+	if is_on_floor():
+		if player_direction == 0:
+			_animated_sprite.play("Idle")
+		else:
+			_animated_sprite.play("Run")
+	else:
+		if velocity.y < 0:
+			_animated_sprite.play("Jump")
+		elif velocity.y > 0:
+			_animated_sprite.play("Fall")

@@ -1,5 +1,5 @@
-res://Scenes/Player.tscn
-res://Scripts/Player.gd
 res://Scenes/Level_1.tscn
-res://Scenes/Level_2.tscn
 res://Resources/standing_shape.tres
+res://Scripts/Player.gd
+res://Scenes/Level_2.tscn
+res://Scenes/Player.tscn

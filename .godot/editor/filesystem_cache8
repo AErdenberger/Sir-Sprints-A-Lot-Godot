@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709762786
+::res://::1709922847
 icon.svg::CompressedTexture2D::2455082875730507069::1708380609::1708380614::1::::<><>::
 ::res://Animations/::1708383865
 ::res://Assets/::1708380787
@@ -44,10 +44,13 @@ CloudsFront.png::CompressedTexture2D::232627402081879296::1708380721::1708380725
 Tileset.png::CompressedTexture2D::347190948819348134::1708380721::1708380725::1::::<><>::
 TilesExamples.png::CompressedTexture2D::5744131186641414466::1708380721::1708380725::1::::<><>::
 Trees.png::CompressedTexture2D::3044046815716355088::1708380721::1708380725::1::::<><>::
-::res://Scenes/::1709755671
+::res://Resources/::1709764951
+crouching_cshape.tres::RectangleShape2D::1968515101747925055::1709763162::0::1::::<><>::
+standing_shape.tres::RectangleShape2D::7882725211245712315::1709764951::0::1::::<><>::
+::res://Scenes/::1709765514
 background.tscn::PackedScene::3078757877882681875::1709179058::0::1::::<><>::uid://dbl4soqgr0wfj::::res://Assets/Level Layouts/Background/CloudsBack.png<>uid://dkxlsi3hic3q::::res://Assets/Level Layouts/Background/CloudsFront.png<>uid://cwjqi1vy6o4gc::::res://Assets/Level Layouts/Background/BGBack.png<>uid://bmxfqw5j5qjvr::::res://Assets/Level Layouts/Background/BGFront.png
-Level_1.tscn::PackedScene::2077468257857753234::1709755671::0::1::::<><>::uid://bj4mxspr6i4h8::::res://Scenes/background.tscn<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>uid://cge7s4cddg137::::res://Scenes/Player.tscn
-Level_2.tscn::PackedScene::2974235482721642812::1709755671::0::1::::<><>::uid://bj4mxspr6i4h8::::res://Scenes/background.tscn<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>uid://cge7s4cddg137::::res://Scenes/Player.tscn
-Player.tscn::PackedScene::5204208554696795648::1709755671::0::1::::<><>::res://Scripts/Player.gd<>uid://gdljj5r14ax8::::res://Assets/Character/_Crouch.png<>uid://bsxb6k2k70eaf::::res://Assets/Character/_Fall.png<>uid://bf8hluft2wjmt::::res://Assets/Character/_CrouchWalk.png<>uid://bggdriv3mpo71::::res://Assets/Character/_Idle.png<>uid://bgo7krmynxc8::::res://Assets/Character/_Jump.png<>uid://cxgjghik6mhp4::::res://Assets/Character/_JumpFallInbetween.png<>uid://c6m4ehvchgufb::::res://Assets/Character/_Run.png
-::res://Scripts/::1709755669
-Player.gd::GDScript::-1::1709755669::0::1::::<>CharacterBody2D<>::
+Level_1.tscn::PackedScene::2077468257857753234::1709765513::0::1::::<><>::uid://bj4mxspr6i4h8::::res://Scenes/background.tscn<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>uid://cge7s4cddg137::::res://Scenes/Player.tscn
+Level_2.tscn::PackedScene::2974235482721642812::1709765514::0::1::::<><>::uid://bj4mxspr6i4h8::::res://Scenes/background.tscn<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>uid://cge7s4cddg137::::res://Scenes/Player.tscn
+Player.tscn::PackedScene::5204208554696795648::1709765514::0::1::::<><>::res://Scripts/Player.gd<>uid://gdljj5r14ax8::::res://Assets/Character/_Crouch.png<>uid://bsxb6k2k70eaf::::res://Assets/Character/_Fall.png<>uid://bf8hluft2wjmt::::res://Assets/Character/_CrouchWalk.png<>uid://bggdriv3mpo71::::res://Assets/Character/_Idle.png<>uid://bgo7krmynxc8::::res://Assets/Character/_Jump.png<>uid://cxgjghik6mhp4::::res://Assets/Character/_JumpFallInbetween.png<>uid://c6m4ehvchgufb::::res://Assets/Character/_Run.png<>uid://3btfkqhvj40b::::res://Resources/crouching_cshape.tres
+::res://Scripts/::1709765512
+Player.gd::GDScript::-1::1709765512::0::1::::<>CharacterBody2D<>::
