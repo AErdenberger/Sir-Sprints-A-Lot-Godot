@@ -51,13 +51,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wy65e"]
-size = Vector2(14, 14)
+size = Vector2(8, 8)
 
 [node name="Coin" type="Area2D"]
 script = ExtResource("1_avmt1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.0338785, 0.0243363)
+scale = Vector2(0.021028, 0.0154867)
 sprite_frames = SubResource("SpriteFrames_ccocj")
 animation = &"Spin"
 frame = 3

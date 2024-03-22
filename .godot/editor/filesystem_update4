@@ -4,3 +4,4 @@ res://Scenes/Level_2.tscn
 res://Scenes/Player.tscn
 res://Scenes/Coin.gd
 res://Scripts/Player.gd
+res://Scenes/coin.tscn
