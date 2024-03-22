@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://4ulumcyldjxy"]
+[gd_scene load_steps=19 format=3 uid="uid://4ulumcyldjxy"]
 
 [ext_resource type="PackedScene" uid="uid://bj4mxspr6i4h8" path="res://Scenes/background.tscn" id="1_e46x1"]
+[ext_resource type="Script" path="res://Scenes/Coin.gd" id="4_gp134"]
 [ext_resource type="Texture2D" uid="uid://cdndskcciy7tq" path="res://Assets/Coin/Gold_21.png" id="4_hadhv"]
 [ext_resource type="Texture2D" uid="uid://e7ggi64r5nl3" path="res://Assets/Level Layouts/Foreground/Tileset.png" id="5_urb57"]
 [ext_resource type="Texture2D" uid="uid://btyaje36fnksp" path="res://Assets/Coin/Gold_22.png" id="5_wo5qt"]
@@ -232,6 +233,9 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy65e"]
+size = Vector2(14, 14)
+
 [node name="Main" type="Node2D"]
 
 [node name="Node2D" parent="." instance=ExtResource("1_e46x1")]
@@ -248,14 +252,17 @@ layer_2/tile_data = PackedInt32Array(262131, 458752, 2, 262132, 524288, 2, 26213
 layer_3/name = "Decoration"
 layer_3/tile_data = PackedInt32Array(196593, 393216, 3, 196594, 458752, 3, 196595, 524288, 3, 196596, 589824, 3, 131116, 393216, 3, 131117, 458752, 3, 131118, 524288, 3, 131119, 589824, 3, 65528, 327680, 5, 65529, 393216, 5, 65530, 458752, 5, -262141, 327680, 5, -262140, 393216, 5, -262139, 458752, 5)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("6_718xb")]
+[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("6_718xb")]
 
-[node name="Coin" type="Node2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_gp134")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Coin"]
-position = Vector2(-362, 100)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
 scale = Vector2(0.0338785, 0.0243363)
 sprite_frames = SubResource("SpriteFrames_ccocj")
 animation = &"Spin"
 frame = 3
 frame_progress = 0.848163
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wy65e")

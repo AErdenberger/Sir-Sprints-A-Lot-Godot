@@ -2,3 +2,4 @@ res://Scenes/Level_1.tscn
 res://Resources/standing_shape.tres
 res://Scenes/Level_2.tscn
 res://Scenes/Player.tscn
+res://Scenes/Coin.gd
