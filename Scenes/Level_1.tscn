@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://4ulumcyldjxy"]
 
 [ext_resource type="PackedScene" uid="uid://bj4mxspr6i4h8" path="res://Scenes/background.tscn" id="1_e46x1"]
-[ext_resource type="Script" path="res://Scenes/Coin.gd" id="4_gp134"]
+[ext_resource type="Script" path="res://Scripts/Coin.gd" id="4_gp134"]
 [ext_resource type="Texture2D" uid="uid://cdndskcciy7tq" path="res://Assets/Coin/Gold_21.png" id="4_hadhv"]
 [ext_resource type="Texture2D" uid="uid://e7ggi64r5nl3" path="res://Assets/Level Layouts/Foreground/Tileset.png" id="5_urb57"]
 [ext_resource type="Texture2D" uid="uid://btyaje36fnksp" path="res://Assets/Coin/Gold_22.png" id="5_wo5qt"]
@@ -254,17 +254,17 @@ layer_3/tile_data = PackedInt32Array(196593, 393216, 3, 196594, 458752, 3, 19659
 
 [node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("6_718xb")]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Coin" type="Area2D" parent="."]
 script = ExtResource("4_gp134")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Coin"]
 scale = Vector2(0.0338785, 0.0243363)
 sprite_frames = SubResource("SpriteFrames_ccocj")
 animation = &"Spin"
 frame = 3
 frame_progress = 0.848163
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
 shape = SubResource("RectangleShape2D_wy65e")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]

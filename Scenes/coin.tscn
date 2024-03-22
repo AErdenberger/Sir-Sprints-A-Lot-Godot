@@ -1,0 +1,69 @@
+[gd_scene load_steps=14 format=3 uid="uid://c1uis5whusl2k"]
+
+[ext_resource type="Script" path="res://Scripts/Coin.gd" id="1_avmt1"]
+[ext_resource type="Texture2D" uid="uid://cdndskcciy7tq" path="res://Assets/Coin/Gold_21.png" id="2_hcgu5"]
+[ext_resource type="Texture2D" uid="uid://btyaje36fnksp" path="res://Assets/Coin/Gold_22.png" id="3_cdnef"]
+[ext_resource type="Texture2D" uid="uid://dofokodb8fyaj" path="res://Assets/Coin/Gold_23.png" id="4_ywk2q"]
+[ext_resource type="Texture2D" uid="uid://clhpfppb44wtr" path="res://Assets/Coin/Gold_24.png" id="5_18jxu"]
+[ext_resource type="Texture2D" uid="uid://cxi7bpnqc8vpm" path="res://Assets/Coin/Gold_25.png" id="6_uvg82"]
+[ext_resource type="Texture2D" uid="uid://ir30ckujstqa" path="res://Assets/Coin/Gold_26.png" id="7_7obf0"]
+[ext_resource type="Texture2D" uid="uid://dcu10oan2jra3" path="res://Assets/Coin/Gold_27.png" id="8_rlw86"]
+[ext_resource type="Texture2D" uid="uid://ckd5cpudniybk" path="res://Assets/Coin/Gold_28.png" id="9_g1oud"]
+[ext_resource type="Texture2D" uid="uid://bxrmaqw7xhnn6" path="res://Assets/Coin/Gold_29.png" id="10_h00k2"]
+[ext_resource type="Texture2D" uid="uid://bqew4b014y811" path="res://Assets/Coin/Gold_30.png" id="11_772gv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccocj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hcgu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cdnef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ywk2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_18jxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uvg82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7obf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rlw86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g1oud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_h00k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_772gv")
+}],
+"loop": true,
+"name": &"Spin",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy65e"]
+size = Vector2(14, 14)
+
+[node name="Coin" type="Area2D"]
+script = ExtResource("1_avmt1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.0338785, 0.0243363)
+sprite_frames = SubResource("SpriteFrames_ccocj")
+animation = &"Spin"
+frame = 3
+frame_progress = 0.848163
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wy65e")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

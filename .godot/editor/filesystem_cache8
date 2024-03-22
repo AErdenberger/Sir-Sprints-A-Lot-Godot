@@ -55,13 +55,14 @@ CloudsFront.png::CompressedTexture2D::232627402081879296::1708384321::1708384325
 Tileset.png::CompressedTexture2D::347190948819348134::1708384321::1708384325::1::::<><>::
 TilesExamples.png::CompressedTexture2D::5744131186641414466::1708384321::1708384325::1::::<><>::
 Trees.png::CompressedTexture2D::3044046815716355088::1708384321::1708384325::1::::<><>::
-::res://Resources/::1709929372
+::res://Resources/::1711079393
 crouching_cshape.tres::RectangleShape2D::1968515101747925055::1709766762::0::1::::<><>::
-standing_shape.tres::RectangleShape2D::7882725211245712315::1709929372::0::1::::<><>::
-::res://Scenes/::1709930151
+standing_shape.tres::RectangleShape2D::7882725211245712315::1711079393::0::1::::<><>::
+::res://Scenes/::1711081683
 background.tscn::PackedScene::3078757877882681875::1709182658::0::1::::<><>::uid://dbl4soqgr0wfj::::res://Assets/Level Layouts/Background/CloudsBack.png<>uid://dkxlsi3hic3q::::res://Assets/Level Layouts/Background/CloudsFront.png<>uid://cwjqi1vy6o4gc::::res://Assets/Level Layouts/Background/BGBack.png<>uid://bmxfqw5j5qjvr::::res://Assets/Level Layouts/Background/BGFront.png
-Level_1.tscn::PackedScene::2077468257857753234::1709930123::0::1::::<><>::uid://bj4mxspr6i4h8::::res://Scenes/background.tscn<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>uid://cge7s4cddg137::::res://Scenes/Player.tscn
-Level_2.tscn::PackedScene::2974235482721642812::1709930123::0::1::::<><>::uid://bj4mxspr6i4h8::::res://Scenes/background.tscn<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>uid://cge7s4cddg137::::res://Scenes/Player.tscn
-Player.tscn::PackedScene::5204208554696795648::1709930151::0::1::::<><>::res://Scripts/Player.gd<>uid://gdljj5r14ax8::::res://Assets/Character/_Crouch.png<>uid://bsxb6k2k70eaf::::res://Assets/Character/_Fall.png<>uid://bf8hluft2wjmt::::res://Assets/Character/_CrouchWalk.png<>uid://bggdriv3mpo71::::res://Assets/Character/_Idle.png<>uid://bgo7krmynxc8::::res://Assets/Character/_Jump.png<>uid://cxgjghik6mhp4::::res://Assets/Character/_JumpFallInbetween.png<>uid://c6m4ehvchgufb::::res://Assets/Character/_Run.png<>uid://dkkplkoqy6oal::::res://Resources/standing_shape.tres
-::res://Scripts/::1709930122
-Player.gd::GDScript::-1::1709930122::0::1::::<>CharacterBody2D<>::
+Level_1.tscn::PackedScene::2077468257857753234::1711081896::0::1::::<><>::uid://bj4mxspr6i4h8::::res://Scenes/background.tscn<>res://Scenes/Coin.gd<>uid://cdndskcciy7tq::::res://Assets/Coin/Gold_21.png<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>uid://btyaje36fnksp::::res://Assets/Coin/Gold_22.png<>uid://cge7s4cddg137::::res://Scenes/Player.tscn<>uid://dofokodb8fyaj::::res://Assets/Coin/Gold_23.png<>uid://clhpfppb44wtr::::res://Assets/Coin/Gold_24.png<>uid://cxi7bpnqc8vpm::::res://Assets/Coin/Gold_25.png<>uid://ir30ckujstqa::::res://Assets/Coin/Gold_26.png<>uid://dcu10oan2jra3::::res://Assets/Coin/Gold_27.png<>uid://ckd5cpudniybk::::res://Assets/Coin/Gold_28.png<>uid://bxrmaqw7xhnn6::::res://Assets/Coin/Gold_29.png<>uid://bqew4b014y811::::res://Assets/Coin/Gold_30.png
+Level_2.tscn::PackedScene::2974235482721642812::1711081683::0::1::::<><>::uid://bj4mxspr6i4h8::::res://Scenes/background.tscn<>uid://e7ggi64r5nl3::::res://Assets/Level Layouts/Foreground/Tileset.png<>uid://cge7s4cddg137::::res://Scenes/Player.tscn
+Player.tscn::PackedScene::5204208554696795648::1711081683::0::1::::<><>::res://Scripts/Player.gd<>uid://gdljj5r14ax8::::res://Assets/Character/_Crouch.png<>uid://bsxb6k2k70eaf::::res://Assets/Character/_Fall.png<>uid://bf8hluft2wjmt::::res://Assets/Character/_CrouchWalk.png<>uid://bggdriv3mpo71::::res://Assets/Character/_Idle.png<>uid://bgo7krmynxc8::::res://Assets/Character/_Jump.png<>uid://cxgjghik6mhp4::::res://Assets/Character/_JumpFallInbetween.png<>uid://c6m4ehvchgufb::::res://Assets/Character/_Run.png<>uid://dkkplkoqy6oal::::res://Resources/standing_shape.tres
+Coin.gd::GDScript::-1::1711081619::0::1::::<>Area2D<>::
+::res://Scripts/::1711081679
+Player.gd::GDScript::-1::1711081679::0::1::::<>CharacterBody2D<>::
