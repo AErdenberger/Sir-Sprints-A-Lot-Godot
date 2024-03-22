@@ -13,6 +13,8 @@ var is_crouching = false
 var standing_cshape = preload("res://Resources/standing_shape.tres")
 var crouching_cshape = preload("res://Resources/crouching_cshape.tres")
 
+var score : int = 0
+
 func _physics_process(delta):
 	
 	# Add the gravity.
@@ -94,3 +96,6 @@ func switch_direction(player_direction):
 	_animated_sprite.flip_h = (player_direction == -1)
 	if _animated_sprite.flip_h:
 		_animated_sprite.position.x = player_direction * 4
+
+func add_score(amount):
+	score += amount
