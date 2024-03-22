@@ -1,9 +1,9 @@
-TileMap
-Camera2D
 CollisionShape2D
 AnimatedSprite2D
+Node2D
+TileMap
+Camera2D
 AnimationPlayer
 AnimationTree
 CharacterBody2D
-Node2D
 ColorRect

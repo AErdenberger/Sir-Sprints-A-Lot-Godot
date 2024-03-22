@@ -1,8 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://4ulumcyldjxy"]
+[gd_scene load_steps=17 format=3 uid="uid://4ulumcyldjxy"]
 
 [ext_resource type="PackedScene" uid="uid://bj4mxspr6i4h8" path="res://Scenes/background.tscn" id="1_e46x1"]
+[ext_resource type="Texture2D" uid="uid://cdndskcciy7tq" path="res://Assets/Coin/Gold_21.png" id="4_hadhv"]
 [ext_resource type="Texture2D" uid="uid://e7ggi64r5nl3" path="res://Assets/Level Layouts/Foreground/Tileset.png" id="5_urb57"]
+[ext_resource type="Texture2D" uid="uid://btyaje36fnksp" path="res://Assets/Coin/Gold_22.png" id="5_wo5qt"]
 [ext_resource type="PackedScene" uid="uid://cge7s4cddg137" path="res://Scenes/Player.tscn" id="6_718xb"]
+[ext_resource type="Texture2D" uid="uid://dofokodb8fyaj" path="res://Assets/Coin/Gold_23.png" id="6_oi1dp"]
+[ext_resource type="Texture2D" uid="uid://clhpfppb44wtr" path="res://Assets/Coin/Gold_24.png" id="7_e6qlm"]
+[ext_resource type="Texture2D" uid="uid://cxi7bpnqc8vpm" path="res://Assets/Coin/Gold_25.png" id="8_uv5vo"]
+[ext_resource type="Texture2D" uid="uid://ir30ckujstqa" path="res://Assets/Coin/Gold_26.png" id="9_7lr8u"]
+[ext_resource type="Texture2D" uid="uid://dcu10oan2jra3" path="res://Assets/Coin/Gold_27.png" id="10_uxsv1"]
+[ext_resource type="Texture2D" uid="uid://ckd5cpudniybk" path="res://Assets/Coin/Gold_28.png" id="11_jipu6"]
+[ext_resource type="Texture2D" uid="uid://bxrmaqw7xhnn6" path="res://Assets/Coin/Gold_29.png" id="12_ico60"]
+[ext_resource type="Texture2D" uid="uid://bqew4b014y811" path="res://Assets/Coin/Gold_30.png" id="13_yl5gc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eoav2"]
 texture = ExtResource("5_urb57")
@@ -184,6 +194,44 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_eoav2")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_ccocj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hadhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wo5qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oi1dp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e6qlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uv5vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7lr8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_uxsv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_jipu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ico60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yl5gc")
+}],
+"loop": true,
+"name": &"Spin",
+"speed": 8.0
+}]
+
 [node name="Main" type="Node2D"]
 
 [node name="Node2D" parent="." instance=ExtResource("1_e46x1")]
@@ -201,3 +249,13 @@ layer_3/name = "Decoration"
 layer_3/tile_data = PackedInt32Array(196593, 393216, 3, 196594, 458752, 3, 196595, 524288, 3, 196596, 589824, 3, 131116, 393216, 3, 131117, 458752, 3, 131118, 524288, 3, 131119, 589824, 3, 65528, 327680, 5, 65529, 393216, 5, 65530, 458752, 5, -262141, 327680, 5, -262140, 393216, 5, -262139, 458752, 5)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_718xb")]
+
+[node name="Coin" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Coin"]
+position = Vector2(-362, 100)
+scale = Vector2(0.0338785, 0.0243363)
+sprite_frames = SubResource("SpriteFrames_ccocj")
+animation = &"Spin"
+frame = 3
+frame_progress = 0.848163
