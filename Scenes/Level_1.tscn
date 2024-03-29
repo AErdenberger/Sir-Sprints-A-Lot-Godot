@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://4ulumcyldjxy"]
+[gd_scene load_steps=10 format=3 uid="uid://4ulumcyldjxy"]
 
 [ext_resource type="PackedScene" uid="uid://bj4mxspr6i4h8" path="res://Scenes/background.tscn" id="1_e46x1"]
+[ext_resource type="Script" path="res://Scripts/world.gd" id="1_v48ad"]
 [ext_resource type="PackedScene" uid="uid://c1uis5whusl2k" path="res://Scenes/coin.tscn" id="4_6b6v5"]
 [ext_resource type="Texture2D" uid="uid://e7ggi64r5nl3" path="res://Assets/Level Layouts/Foreground/Tileset.png" id="5_urb57"]
 [ext_resource type="Script" path="res://Scripts/HealthBar.gd" id="5_x1t6w"]
@@ -188,6 +189,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_eoav2")
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_v48ad")
 
 [node name="Node2D" parent="." instance=ExtResource("1_e46x1")]
 

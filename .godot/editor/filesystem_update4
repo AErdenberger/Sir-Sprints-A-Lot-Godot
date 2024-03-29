@@ -7,3 +7,5 @@ res://Scripts/HealthBar.gd
 res://Scripts/Player.gd
 res://Scenes/hearts_container.tscn
 res://Scenes/heart_gui.tscn
+res://Scripts/hearts_container.gd
+res://Scripts/world.gd
