@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://4ulumcyldjxy"]
+[gd_scene load_steps=9 format=3 uid="uid://4ulumcyldjxy"]
 
 [ext_resource type="PackedScene" uid="uid://bj4mxspr6i4h8" path="res://Scenes/background.tscn" id="1_e46x1"]
 [ext_resource type="PackedScene" uid="uid://c1uis5whusl2k" path="res://Scenes/coin.tscn" id="4_6b6v5"]
 [ext_resource type="Texture2D" uid="uid://e7ggi64r5nl3" path="res://Assets/Level Layouts/Foreground/Tileset.png" id="5_urb57"]
+[ext_resource type="Script" path="res://Scripts/HealthBar.gd" id="5_x1t6w"]
 [ext_resource type="PackedScene" uid="uid://cge7s4cddg137" path="res://Scenes/Player.tscn" id="6_718xb"]
+[ext_resource type="PackedScene" uid="uid://cres3c6ipyt3a" path="res://Scenes/hearts_container.tscn" id="6_bulhr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eoav2"]
 texture = ExtResource("5_urb57")
@@ -219,3 +221,18 @@ position = Vector2(-109, 42)
 
 [node name="Coin5" parent="CoinHolder" instance=ExtResource("4_6b6v5")]
 position = Vector2(-127, 42)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_right = 31.0
+offset_bottom = 27.0
+max_value = 4.0
+step = 1.0
+show_percentage = false
+script = ExtResource("5_x1t6w")
+
+[node name="HeartsContainer" parent="CanvasLayer" instance=ExtResource("6_bulhr")]
+offset_left = 52.0
+offset_right = 311.0
+offset_bottom = 200.0

@@ -1,17 +1,22 @@
 extends CharacterBody2D
 
+signal healthChanged
+
 @onready var _animated_sprite = $AnimatedSprite2D
 @onready var _collisionshape = $CollisionShape2D
+
 const SPEED = 150.0
 const JUMP_VELOCITY = -300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var health = 4
 var is_crouching = false
-
 var standing_cshape = preload("res://Resources/standing_shape.tres")
 var crouching_cshape = preload("res://Resources/crouching_cshape.tres")
+
+@export var max_health = 4
+var cur_health = max_health
+var isHurt = false
 
 var score : int = 0
 
@@ -42,9 +47,6 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 	
 	move_and_slide()
-	
-	if health < 1:
-		handle_death()
 	
 	if global_position.y > 500:
 		game_over()
@@ -99,3 +101,11 @@ func switch_direction(player_direction):
 
 func add_score(amount):
 	score += amount
+	
+
+func _on_hurt_box_area_entered(area):
+	if area.name == "hitBox":
+		cur_health -= 1
+		if cur_health < 0:
+			cur_health = max_health
+		

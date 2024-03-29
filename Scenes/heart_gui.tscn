@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://ca0sr4nmcwppi"]
+
+[ext_resource type="Texture2D" uid="uid://dlj5gssfgk3od" path="res://Assets/HUD/Heart.png" id="1_ddo11"]
+
+[node name="HeartGUI" type="Panel"]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 62.0
+offset_bottom = 45.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_ddo11")
+centered = false
+hframes = 5
