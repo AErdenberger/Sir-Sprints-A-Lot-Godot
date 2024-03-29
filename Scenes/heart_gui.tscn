@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ca0sr4nmcwppi"]
+[gd_scene load_steps=3 format=3 uid="uid://ca0sr4nmcwppi"]
 
 [ext_resource type="Texture2D" uid="uid://dlj5gssfgk3od" path="res://Assets/HUD/Heart.png" id="1_ddo11"]
+[ext_resource type="Script" path="res://Scripts/hearts.gd" id="1_pydj6"]
 
 [node name="HeartGUI" type="Panel"]
 self_modulate = Color(1, 1, 1, 0)
 offset_right = 62.0
 offset_bottom = 45.0
+script = ExtResource("1_pydj6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)

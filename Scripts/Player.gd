@@ -109,3 +109,5 @@ func _on_hurt_box_area_entered(area):
 		if cur_health < 0:
 			cur_health = max_health
 		
+		healthChanged.emit(cur_health)
+		
