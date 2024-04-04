@@ -112,7 +112,7 @@ func handleCollision():
 			print_debug(collider.name, collision)
 
 func _on_hurt_box_area_entered(area):
-	if area.name == "hitBox":
+	if area.name == "spikes":
 		cur_health -= 1
 		if cur_health < 0:
 			cur_health = max_health
