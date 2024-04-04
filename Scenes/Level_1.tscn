@@ -4,9 +4,9 @@
 [ext_resource type="Script" path="res://Scripts/world.gd" id="1_v48ad"]
 [ext_resource type="PackedScene" uid="uid://c1uis5whusl2k" path="res://Scenes/coin.tscn" id="4_6b6v5"]
 [ext_resource type="Texture2D" uid="uid://e7ggi64r5nl3" path="res://Assets/Level Layouts/Foreground/Tileset.png" id="5_urb57"]
-[ext_resource type="Script" path="res://Scripts/HealthBar.gd" id="5_x1t6w"]
 [ext_resource type="PackedScene" uid="uid://cge7s4cddg137" path="res://Scenes/Player.tscn" id="6_718xb"]
 [ext_resource type="PackedScene" uid="uid://cres3c6ipyt3a" path="res://Scenes/hearts_container.tscn" id="6_bulhr"]
+[ext_resource type="PackedScene" uid="uid://c4ubsyqrppm61" path="res://Scenes/spikes.tscn" id="7_a7275"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eoav2"]
 texture = ExtResource("5_urb57")
@@ -205,7 +205,7 @@ layer_2/tile_data = PackedInt32Array(262131, 458752, 2, 262132, 524288, 2, 26213
 layer_3/name = "Decoration"
 layer_3/tile_data = PackedInt32Array(196593, 393216, 3, 196594, 458752, 3, 196595, 524288, 3, 196596, 589824, 3, 131116, 393216, 3, 131117, 458752, 3, 131118, 524288, 3, 131119, 589824, 3, 65528, 327680, 5, 65529, 393216, 5, 65530, 458752, 5, -262141, 327680, 5, -262140, 393216, 5, -262139, 458752, 5)
 
-[node name="CharacterBody2D" parent="." groups=["Player"] instance=ExtResource("6_718xb")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("6_718xb")]
 
 [node name="CoinHolder" type="Node2D" parent="."]
 
@@ -226,15 +226,10 @@ position = Vector2(-127, 42)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-offset_right = 31.0
-offset_bottom = 27.0
-max_value = 4.0
-step = 1.0
-show_percentage = false
-script = ExtResource("5_x1t6w")
-
 [node name="HeartsContainer" parent="CanvasLayer" instance=ExtResource("6_bulhr")]
 offset_left = 52.0
 offset_right = 311.0
 offset_bottom = 200.0
+
+[node name="Spikes" parent="." instance=ExtResource("7_a7275")]
+position = Vector2(-120, 47)

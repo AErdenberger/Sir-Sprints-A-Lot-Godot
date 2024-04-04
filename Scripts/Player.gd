@@ -47,6 +47,7 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 	
 	move_and_slide()
+	handleCollision()
 	
 	if global_position.y > 500:
 		game_over()
@@ -102,6 +103,13 @@ func switch_direction(player_direction):
 func add_score(amount):
 	score += amount
 	
+
+func handleCollision():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider.is_in_group("Spikes"):
+			print_debug(collider.name, collision)
 
 func _on_hurt_box_area_entered(area):
 	if area.name == "hitBox":

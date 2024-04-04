@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4ubsyqrppm61"]
+
+[ext_resource type="Script" path="res://Scripts/Spikes.gd" id="1_oxdxo"]
+[ext_resource type="Texture2D" uid="uid://cmtjw81iemopa" path="res://Assets/Level Layouts/tile_0068.png" id="2_3dju2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_litvu"]
+size = Vector2(16, 8)
+
+[node name="Spikes" type="Area2D" groups=["Spikes"]]
+script = ExtResource("1_oxdxo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_3dju2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_litvu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
